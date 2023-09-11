@@ -5,40 +5,37 @@ class FizzBuzz {
 
     public static void main(String[] args) {
 
-        int i = 1;
-        while (i < 100) {
-
-            i = doFizzBuzz(i);
-        }
     }
 
-    private static int doFizzBuzz(int i) {
-        // Find out which numbers divide i.
-        boolean divisibleBy3 = i % 3 == 0;
-        boolean divisibleBy5 = i % 5 == 0;
+    public static void doFizzBuzz(int i) {
+        while (i < 100) {
 
-        // Print our appropriate result.
-        if (divisibleBy3 && divisibleBy5) {
+            // Find out which numbers divide i.
+            boolean divisibleBy3 = i % 3 == 0;
+            boolean divisibleBy5 = i % 5 == 0;
 
-            System.out.println("Fizz Buzz");
-            i++;
+            // Print our appropriate result.
+            if (divisibleBy3 && divisibleBy5) {
 
-        } else if (divisibleBy3) {
+                System.out.println("Fizz Buzz");
+                i++;
 
-            System.out.println("Fizz");
-            i++;
+            } else if (divisibleBy3) {
 
-        } else if (divisibleBy5) {
+                System.out.println("Fizz");
+                i++;
 
-            System.out.println("Buzz");
-            i++;
+            } else if (divisibleBy5) {
 
-        } else {
+                System.out.println("Buzz");
+                i++;
 
-            System.out.println(i);
-            i++;
+            } else {
 
+                System.out.println(i);
+                i++;
+
+            }
         }
-        return i;
     }
 }
